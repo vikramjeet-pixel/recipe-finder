@@ -1,0 +1,228 @@
+/* Include Animate.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Default Light Theme */
+:root {
+    --background: #f0f0f0;
+    --container-bg: #ffffe0;
+    --text-color: #000080;
+    --border-color: #000080;
+    --shadow-color: #ff00ff;
+    --button-bg: #c0c0c0;
+    --button-border: #ffffff;
+    --highlight: #00ffff;
+    --title-color: #ff00ff;
+    --title-shadow: #00ffff;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    --background: #333333;
+    --container-bg: #555555;
+    --text-color: #00ffff;
+    --border-color: #00ffff;
+    --shadow-color: #ff00ff;
+    --button-bg: #666666;
+    --button-border: #cccccc;
+    --highlight: #ff00ff;
+    --title-color: #00ffff;
+    --title-shadow: #ff00ff;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: var(--container-bg);
+    border: 4px solid var(--border-color);
+    padding: 20px;
+    box-shadow: 5px 5px 0 var(--shadow-color);
+}
+
+.title {
+    color: var(--title-color);
+    text-align: center;
+    text-shadow: 2px 2px var(--title-shadow);
+    font-size: 36px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #c0c0c0, #a0a0a0);
+    padding: 10px;
+    border: 2px outset var(--button-border);
+    margin: 10px 0;
+    box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: underline;
+    font-size: 18px;
+    margin: 0 20px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--highlight);
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+.theme-button {
+    background-color: var(--button-bg);
+    border: 2px outset var(--button-border);
+    padding: 5px 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.theme-button:hover {
+    background-color: var(--highlight);
+    border-style: inset;
+    transform: translateY(-2px);
+}
+
+.welcome-box {
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    padding: 10px 20px;
+    border: 2px outset var(--button-border);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: var(--highlight);
+    transform: translateY(-3px) rotate(2deg);
+    border-style: inset;
+}
+
+.recipe-list {
+    margin: 20px 0;
+}
+
+.search-bar, .cuisine-select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--button-bg);
+    border: 2px inset var(--button-border);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.recipe-card {
+    background-color: var(--container-bg);
+    border: 2px solid var(--border-color);
+    padding: 15px;
+    margin: 10px 0;
+    transition: all 0.3s;
+}
+
+.recipe-card:hover {
+    box-shadow: 5px 5px 0 var(--shadow-color);
+    transform: translate(-2px, -2px) scale(1.02);
+}
+
+.recipe-details {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--container-bg);
+    border: 2px solid var(--border-color);
+}
+
+.recipe-details img {
+    float: left;
+    margin-right: 20px;
+    border: 2px solid var(--border-color);
+    max-width: 200px;
+}
+
+.recipe-details h2 {
+    margin-top: 0;
+}
+
+.recipe-details p, .recipe-details pre {
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.recipe-details::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    text-align: center;
+    color: #808080;
+    padding: 10px;
+    border-top: 2px solid var(--border-color);
+}
+
+.form-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--container-bg);
+    border: 2px solid var(--border-color);
+}
+
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.recipe-form input,
+.recipe-form select,
+.recipe-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--button-bg);
+    border: 2px inset var(--button-border);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.recipe-form input[type="file"] {
+    padding: 5px;
+}
+
+.recipe-form input:focus,
+.recipe-form select:focus,
+.recipe-form textarea:focus {
+    border: 2px solid var(--highlight);
+    outline: none;
+    background-color: #e0e0e0;
+}
+
+.recipe-form button {
+    align-self: flex-start;
+}

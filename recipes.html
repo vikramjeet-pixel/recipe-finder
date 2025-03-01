@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Recipe Finder 95</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title animate__bounceIn">Recipe Finder 95</h1>
+            <nav class="nav-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="recipes.html" class="nav-link">Recipes</a>
+                <a href="add-recipe.html" class="nav-link">Add Recipe</a>
+                <a href="new-recipes.html" class="nav-link">New Recipes</a>
+                <button id="theme-toggle" class="theme-button">Toggle Theme</button>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="recipe-list animate__fadeIn">
+                <h2>Global Recipes</h2>
+                <input type="text" id="search-bar" placeholder="Search recipes..." class="search-bar">
+                <select id="cuisine-filter" class="cuisine-select">
+                    <option value="all">All Cuisines</option>
+                </select>
+                <div id="recipe-container"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 1995 Recipe Finder Inc.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe - Recipe Finder 95</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title animate__bounceIn">Recipe Finder 95</h1>
+            <nav class="nav-bar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="recipes.html" class="nav-link">Recipes</a>
+                <a href="add-recipe.html" class="nav-link">Add Recipe</a>
+                <a href="new-recipes.html" class="nav-link">New Recipes</a>
+                <button id="theme-toggle" class="theme-button">Toggle Theme</button>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="form-container animate__fadeIn">
+                <h2>Add a New Recipe</h2>
+                <form id="add-recipe-form" class="recipe-form">
+                    <label for="recipe-title">Recipe Title:</label>
+                    <input type="text" id="recipe-title" required>
+
+                    <label for="recipe-cuisine">Cuisine:</label>
+                    <select id="recipe-cuisine" required>
+                        <option value="">Select Cuisine</option>
+                    </select>
+
+                    <label for="recipe-image">Recipe Image:</label>
+                    <input type="file" id="recipe-image" accept="image/*">
+
+                    <label for="recipe-ingredients">Ingredients (one per line):</label>
+                    <textarea id="recipe-ingredients" rows="5" required></textarea>
+
+                    <label for="recipe-instructions">Instructions:</label>
+                    <textarea id="recipe-instructions" rows="5" required></textarea>
+
+                    <label for="recipe-time">Preparation Time (minutes):</label>
+                    <input type="number" id="recipe-time" min="1" required>
+
+                    <label for="recipe-servings">Servings:</label>
+                    <input type="number" id="recipe-servings" min="1" required>
+
+                    <button type="submit" class="button">Add Recipe</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 1995 Recipe Finder Inc.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
